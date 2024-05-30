@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="Formulaire.css" >
+    <script src="Formulaire.js"></script>
+    <title>Formulaire</title>
+</head>
+<body>
+    <h1> Formulaire de prise de contact</h1>
+    <form id="contact-form" onsubmit="Submit(event)">
+        <!--Champ de texte-->
+        <label for="nom">Nom : </label>
+        <input type="text" id="nom" name="nom" required><br><br>
+
+        <label for="prenom">Prénom : </label>
+        <input type="text" id="prenom" name="prenom" required><br><br>
+
+        <!--Champ d'email-->
+        <label for="email">Email : </label>
+        <input type="email" id="email" name="email" required><br><br>
+        <!--date de naissance-->
+        <label for="date">Date de naissance : </label>
+        <input type="date" id="date" name="date" required><br><br>
+        <!--liste déroulante différentes formations-->
+        <label for="formations">Formation souhaitées à l'ENSIBS : </label>
+        <select id="formations" name="formations" required><br><br>
+            <option value="Cyberdéfense">Cyberdéfense</option>
+            <option value="Énergies, Hydrogène">Énergies, Hydrogène</option>
+            <option value="Génie civil 4.0">Génie civil 4.0</option>
+            <option value="Génie industriel 4.0">Génie industriel 4.0</option>
+            <option value="Informatique et Cybersécurité">Informatique et Cybersécurité</option>
+            <option value="Mécatronique">Mécatronique</option>
+        </select>
+        <br><br>
+        <!--Bouton radios-->
+        <p>Actuellement vous êtes :</p>
+        <input type="radio" id="1ere" name="annee" value="1ere" required>
+        <label for="1ere"> En 1ère</label><br><br>
+        <input type="radio" id="terminale" name="annee" value="terminale" required>
+        <label for="terminale"> En terminale</label><br><br>
+        <input type="radio" id="IUT" name="annee" value="IUT" required>
+        <label for="IUT"> En IUT</label><br><br>
+        <input type="radio" id="license" name="annee" value="license" required>
+        <label for="license"> En license</label><br><br>
+        <input type="radio" id="master" name="annee" value="master" required>
+        <label for="master"> En master</label><br><br>
+        <input type="radio" id="reprise" name="annee" value="reprise" required>
+        <label for="reprise"> En reprise d'études</label><br><br>
+        <input type="radio" id="chomage" name="annee" value="chomage" required>
+        <label for="chomage"> En train de jouer à lol</label><br><br>
+
+        <!--Cases à cocher-->
+        <p>Langues parlées :</p>
+        <input type="checkbox" id="francais" name="langues" value="francais">
+        <label for="francais">Français</label><br><br>
+
+        <input type="checkbox" id="espagnol" name="langues" value="espagnol">
+        <label for="espagnol"> Si señiorita</label><br><br>
+
+        <input type="checkbox" id="allemand" name="langues" value="allemand">
+        <label for="allemand"> La langue de TONTON</label><br><br>
+
+        <input type="checkbox" id="anglais" name="langues" value="anglais">
+        <label for="anglais"> Roastbeef</label><br><br>
+
+        <!--Zone de texte-->
+        <label for="demande"> vous avez une demande spécifique à formuler :</label><br>
+        <textarea id="demande" name="demande" rows="4" cols="50"></textarea><br><br>
+
+        <!--bouton de soumission-->
+        <!--Captcha-->
+        <p> Veuillez résoudre l'opération suivante :</p>
+        <span id="captcha"></span> =
+        <input type="number" id="captcha-result" required> <br><br>
+        <!--bouton de soumission-->
+
+        <input type="submit" value="Envoyer">
+    </form>
+</body>
+</html>

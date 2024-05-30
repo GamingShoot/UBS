@@ -1,0 +1,183 @@
+html, body {
+    height: 100%;
+    margin: 0; /* marge horizontale et verticale à 0 */
+    padding: 0; /* espacement interne à 0 */
+}
+body {
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+header, footer {
+    background-color: #004d00;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+header {
+    font-size: 32px;
+}
+footer{
+    font-size: 16px;
+}
+.container {
+    flex: 1;
+    display: grid; /* contenir une page avec des lignes et des colones */
+    width: 100%;
+    margin: 0;
+}
+nav, article {
+    padding: 20px;
+}
+nav {
+    background: whitesmoke;
+    flex: 1;
+    font-size: 15px;
+}
+article {
+    background-color: white;
+    font-size: 18px;
+}
+nav ul {
+    list-style-type: none; /*supprime les puces ou numéros par défaut (ordonnée ou non)*/
+    padding: 0;
+}
+nav ul li {
+    flex: 1;
+}
+nav ul li a {
+    color: black;
+    font-size: 18px;
+    padding: 15px;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box; /*la largeur et la hauteur incluent les bordures et les espacmeents internes */
+}
+nav ul li a:hover {
+    background-color: #004d00;
+    color:  white;
+}
+.btn {
+    display: inline-block; /*éléent en ligne*/
+    padding: 15px 25px;
+    margin: 5px 0;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    background-color: #004d00;
+    border-radius: 5px; /*coins arrondis */
+    text-decoration: none; /*enlever le soulignement du text*/
+}
+.btn:hover {
+    background-color: #003300;
+}
+
+@media (min-width: 600px) {/*règle de média appliquée lorsque la largeur de l'écran est d'au moins de 600px*/
+
+    .container {
+        grid-template-columns: 20% 80%; /*deux colonnes*/
+        grid-template-rows: none; /*aucune ligne*/
+    }
+    nav {
+        order: 1; /*place en 1er dans l'ordre de la grille*/
+    }
+    article {
+        order: 2; /*place en 2ème dans l'ordre de la grille*/
+    }
+}
+
+
+
+
+html, body {
+    height: 100%; /* Définit la hauteur des éléments html et body à 100% de la hauteur de la fenêtre. */
+    margin: 0; /* **marge** horizontale et verticale à 0 */
+    padding: 0; /* **espacement interne** à 0 */
+}
+body {
+    font-family: Arial; /* Définit la **police de caractères** pour le corps du document. */
+    display: flex; /* Définit le **mode de disposition** en flexbox. */
+    flex-direction: column; /* Définit la **direction** des éléments flexibles en colonne. */
+    background-color: white; /* Définit la **couleur de fond** à blanc. */
+}
+header, footer {
+    background-color: #004d00; /* Définit la **couleur de fond** à un vert foncé. */
+    color: white; /* Définit la **couleur du texte** à blanc. */
+    text-align: center; /* Aligne le **texte au centre**. */
+    padding: 20px; /* Définit un **espacement interne** de 20 pixels. */
+}
+header {
+    font-size: 32px; /* Définit la **taille de la police** à 32 pixels. */
+}
+footer {
+    font-size: 16px; /* Définit la **taille de la police** à 16 pixels. */
+}
+.container {
+    flex: 1; /* L'élément prend tout l'espace disponible dans le conteneur flex. */
+    display: grid; /* Conteneur utilise la **disposition en grille**. */
+    width: 100%; /* Définit la **largeur** à 100%. */
+    margin: 0; /* Définit la **marge** à 0. */
+}
+nav, article {
+    padding: 20px; /* Définit un **espacement interne** de 20 pixels. */
+}
+nav {
+    background: whitesmoke; /* Définit la **couleur de fond** à blanc cassé. */
+    flex: 1; /* Prend tout l'espace disponible dans le conteneur flex. */
+    font-size: 15px; /* Définit la **taille de la police** à 15 pixels. */
+}
+article {
+    background-color: white; /* Définit la **couleur de fond** à blanc. */
+    font-size: 18px; /* Définit la **taille de la police** à 18 pixels. */
+}
+nav ul {
+    list-style-type: none; /* Supprime les **puces** ou numéros par défaut. */
+    padding: 0; /* Définit **l'espacement interne** à 0. */
+}
+nav ul li {
+    flex: 1; /* Prend tout l'espace disponible dans le conteneur flex. */
+}
+nav ul li a {
+    color: black; /* Définit la **couleur du texte** à noir. */
+    font-size: 18px; /* Définit la **taille de la police** à 18 pixels. */
+    padding: 15px; /* Définit un **espacement interne** de 15 pixels. */
+    border: 1px solid whitesmoke; /* Définit une **bordure** d'1 pixel de couleur blanc cassé. */
+    border-radius: 5px; /* Définit un **rayon de bordure** de 5 pixels pour arrondir les coins. */
+    text-align: center; /* Aligne le **texte au centre**. */
+    width: 100%; /* Définit la **largeur** à 100%. */
+    box-sizing: border-box; /* La largeur et la hauteur incluent les **bordures** et les **espacements internes**. */
+}
+nav ul li a:hover {
+    background-color: #004d00; /* Change la **couleur de fond** à un vert foncé lors du survol. */
+    color: white; /* Change la **couleur du texte** à blanc lors du survol. */
+}
+.btn {
+    display: inline-block; /* Définit l'élément comme un **élément en ligne**. */
+    padding: 15px 25px; /* Définit un **espacement interne** de 15 pixels en haut et en bas, et de 25 pixels à gauche et à droite. */
+    margin: 5px 0; /* Définit une **marge** de 5 pixels en haut et en bas, et de 0 à gauche et à droite. */
+    font-size: 18px; /* Définit la **taille de la police** à 18 pixels. */
+    text-align: center; /* Aligne le **texte au centre**. */
+    color: white; /* Définit la **couleur du texte** à blanc. */
+    background-color: #004d00; /* Définit la **couleur de fond** à un vert foncé. */
+    border-radius: 5px; /* Définit un **rayon de bordure** de 5 pixels pour arrondir les coins. */
+    text-decoration: none; /* Enlève le **soulignement du texte**. */
+}
+.btn:hover {
+    background-color: #003300; /* Change la **couleur de fond** à un vert encore plus foncé lors du survol. */
+}
+
+@media (min-width: 600px) { /* **Règle de média** appliquée lorsque la largeur de l'écran est d'au moins 600 pixels. */
+    .container {
+        grid-template-columns: 20% 80%; /* Définit une grille avec **deux colonnes**. */
+        grid-template-rows: none; /* Aucune **ligne** définie. */
+    }
+    nav {
+        order: 1; /* Place l'élément **nav** en premier dans l'ordre de la grille. */
+    }
+    article {
+        order: 2; /* Place l'élément **article** en deuxième dans l'ordre de la grille. */
+    }
+}
